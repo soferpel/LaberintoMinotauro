@@ -1,0 +1,404 @@
+Using pre-set license
+Built from '2022.3/release' branch; Version is '2022.3.20f1 (61c2feb0970d) revision 6406910'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'es' Physical Memory: 7834 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/sofia/OneDrive/Documentos/GitHub/LaberintoMinotauro/LaberintoMinotauro
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+59968
+Successfully changed project path to: C:/Users/sofia/OneDrive/Documentos/GitHub/LaberintoMinotauro/LaberintoMinotauro
+C:/Users/sofia/OneDrive/Documentos/GitHub/LaberintoMinotauro/LaberintoMinotauro
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [9964] Host "[IP] 10.164.55.100 [Port] 0 [Flags] 2 [Guid] 2135563524 [EditorId] 2135563524 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [9964] Host "[IP] 10.164.55.100 [Port] 0 [Flags] 2 [Guid] 2135563524 [EditorId] 2135563524 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
+Refreshing native plugins compatible for Editor in 32.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.20f1 (61c2feb0970d)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/sofia/OneDrive/Documentos/GitHub/LaberintoMinotauro/LaberintoMinotauro/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x9a49)
+    Vendor:   Intel
+    VRAM:     3917 MB
+    Driver:   31.0.101.4032
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56732
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.012826 seconds.
+- Loaded All Assemblies, in  0.868 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.549 seconds
+Domain Reload Profiling: 1414ms
+	BeginReloadAssembly (360ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (92ms)
+	RebuildNativeTypeToScriptingClass (29ms)
+	initialDomainReloadingComplete (125ms)
+	LoadAllAssembliesAndSetupDomain (258ms)
+		LoadAssemblies (355ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (251ms)
+			TypeCache.Refresh (248ms)
+				TypeCache.ScanAssembly (218ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (549ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (421ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (19ms)
+			SetLoadedEditorAssemblies (14ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (5ms)
+			ProcessInitializeOnLoadAttributes (292ms)
+			ProcessInitializeOnLoadMethodAttributes (91ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.287 seconds
+Refreshing native plugins compatible for Editor in 8.81 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.246 seconds
+Domain Reload Profiling: 2528ms
+	BeginReloadAssembly (323ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (65ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (83ms)
+	LoadAllAssembliesAndSetupDomain (792ms)
+		LoadAssemblies (654ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (331ms)
+			TypeCache.Refresh (299ms)
+				TypeCache.ScanAssembly (277ms)
+			ScanForSourceGeneratedMonoScriptInfo (20ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1246ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (949ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (103ms)
+			ProcessInitializeOnLoadAttributes (765ms)
+			ProcessInitializeOnLoadMethodAttributes (49ms)
+			AfterProcessingInitializeOnLoad (15ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 7.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3094 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (57.4 KB). Loaded Objects now: 3555.
+Memory consumption went from 122.8 MB to 122.7 MB.
+Total: 7.686400 ms (FindLiveObjects: 1.033300 ms CreateObjectMapping: 0.411900 ms MarkObjects: 5.985500 ms  DeleteObjects: 0.253100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 419712.522277 seconds.
+  path: Assets/Assets/3D - Wall Lamp/1_lamp_support/Material-metallic.png
+  artifactKey: Guid(7240ab490f805184891c45afd6894661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/3D - Wall Lamp/1_lamp_support/Material-metallic.png using Guid(7240ab490f805184891c45afd6894661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0a3304fdb6aa8a699de8f1ced1739a5') in 0.143456 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Assets/3D - Wall Lamp/1_lamp_support/lamp_support.obj
+  artifactKey: Guid(90abd46582a16124d9af19926a217b26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/3D - Wall Lamp/1_lamp_support/lamp_support.obj using Guid(90abd46582a16124d9af19926a217b26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50967fa986e12b5083c965d8e5307c55') in 0.601666 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 1.679686 seconds.
+  path: Assets/Assets/3D - Wall Lamp/Scene
+  artifactKey: Guid(be77d84f0ce00974cb978cdf1e3b9ca6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/3D - Wall Lamp/Scene using Guid(be77d84f0ce00974cb978cdf1e3b9ca6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '714e630c94e2130fe5cb84783e84d026') in 0.001830 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 9.051815 seconds.
+  path: Assets/Assets/medicina y llave
+  artifactKey: Guid(3a8816a918ecec44e8ea85f6097d6f74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave using Guid(3a8816a918ecec44e8ea85f6097d6f74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05c69c644638c1be9f7700e18684560a') in 0.001284 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.422885 seconds.
+  path: Assets/Assets/medicina y llave/Materials
+  artifactKey: Guid(7ecb3ed508850e24bbb8d85007044e39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Materials using Guid(7ecb3ed508850e24bbb8d85007044e39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca592f7d0128e870b1ced4a00d6029d9') in 0.001812 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.043734 seconds.
+  path: Assets/Assets/medicina y llave/Materials/Key.mat
+  artifactKey: Guid(39d51b5a16ce53748abdfa95d0385b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Materials/Key.mat using Guid(39d51b5a16ce53748abdfa95d0385b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7fc2b06d1561bf3972366ff74cc31b1') in 0.104573 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Assets/medicina y llave/Materials/PictureFrameBody.mat
+  artifactKey: Guid(a8986e1bfe480054595d6f53a358f9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Materials/PictureFrameBody.mat using Guid(a8986e1bfe480054595d6f53a358f9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8787ac9ec0e34dd857e1e9d63afb21b7') in 0.043493 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 109.500550 seconds.
+  path: Assets/Assets/medicina y llave/Packages/LWRP.unitypackage
+  artifactKey: Guid(7fa5fecd91d5f88419706d57ba80c2dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Packages/LWRP.unitypackage using Guid(7fa5fecd91d5f88419706d57ba80c2dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ded0b554389ab2f5c65abd31f575114f') in 0.002308 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 16.200364 seconds.
+  path: Assets/Assets/medicina y llave/Materials/Key.mat
+  artifactKey: Guid(39d51b5a16ce53748abdfa95d0385b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Materials/Key.mat using Guid(39d51b5a16ce53748abdfa95d0385b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4195a029ecc60d3264d4cf8baa4cfbe6') in 0.043905 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Assets/medicina y llave/Materials/Shackles.mat
+  artifactKey: Guid(02d8c5b1e322426458011589527807f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Materials/Shackles.mat using Guid(02d8c5b1e322426458011589527807f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5c0bf80d7ffacda3848a2174a810442') in 0.028722 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Assets/medicina y llave/Materials/PictureFrameGlass.mat
+  artifactKey: Guid(2c08eac8becc61045814b96a5fc8dd60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Materials/PictureFrameGlass.mat using Guid(2c08eac8becc61045814b96a5fc8dd60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab475129f4ebfad17005237807ecccde') in 0.024654 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.624397 seconds.
+  path: Assets/Assets/medicina y llave/Textures/AllModels_Materia_lAlbedoTransparency.png
+  artifactKey: Guid(a47c4ab9b6f823547b234703979aef54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Textures/AllModels_Materia_lAlbedoTransparency.png using Guid(a47c4ab9b6f823547b234703979aef54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'effad4195ce121ba4216be67a0b60062') in 0.054287 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 67.824671 seconds.
+  path: Assets/Assets/medicina y llave/Materials/Key.mat
+  artifactKey: Guid(39d51b5a16ce53748abdfa95d0385b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Materials/Key.mat using Guid(39d51b5a16ce53748abdfa95d0385b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79d35ebd096b16f28d08209e9485a9d5') in 0.033340 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000548 seconds.
+  path: Assets/Assets/medicina y llave/Materials/Shackles.mat
+  artifactKey: Guid(02d8c5b1e322426458011589527807f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Materials/Shackles.mat using Guid(02d8c5b1e322426458011589527807f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec817825c0a2f77aba6341097721e1fd') in 0.013431 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Assets/medicina y llave/Materials/PictureFrameGlass.mat
+  artifactKey: Guid(2c08eac8becc61045814b96a5fc8dd60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Materials/PictureFrameGlass.mat using Guid(2c08eac8becc61045814b96a5fc8dd60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41a443368913526c747f4631182b5867') in 0.022786 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 15.691403 seconds.
+  path: Assets/Assets/medicina y llave/Packages/HDRP.unitypackage
+  artifactKey: Guid(8ea367b62a29d8546b2602d526fc5736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Packages/HDRP.unitypackage using Guid(8ea367b62a29d8546b2602d526fc5736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '692f4f442d7f2c849442d59601fdf1bb') in 0.001666 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 10.594917 seconds.
+  path: Assets/InstantZoomies/HorrorStarterPackFREE/Materials/Key.mat
+  artifactKey: Guid(39d51b5a16ce53748abdfa95d0385b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InstantZoomies/HorrorStarterPackFREE/Materials/Key.mat using Guid(39d51b5a16ce53748abdfa95d0385b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f0d412f3dab543c771cb5d0749378a4') in 0.029209 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/InstantZoomies/HorrorStarterPackFREE/Materials/SyringeTube.mat
+  artifactKey: Guid(4d60bf9b49916fb4582262652694a103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InstantZoomies/HorrorStarterPackFREE/Materials/SyringeTube.mat using Guid(4d60bf9b49916fb4582262652694a103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45693c58263b3bc7b4f8c33cc4ed8205') in 0.014323 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/InstantZoomies/HorrorStarterPackFREE/Materials/PictureFrameGlass.mat
+  artifactKey: Guid(2c08eac8becc61045814b96a5fc8dd60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InstantZoomies/HorrorStarterPackFREE/Materials/PictureFrameGlass.mat using Guid(2c08eac8becc61045814b96a5fc8dd60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c44823ae37611af5f513c041d00ec79b') in 0.015531 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/InstantZoomies/HorrorStarterPackFREE/Materials/SyringeBody.mat
+  artifactKey: Guid(6c7a2e2a53a62d2499829f64309793d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InstantZoomies/HorrorStarterPackFREE/Materials/SyringeBody.mat using Guid(6c7a2e2a53a62d2499829f64309793d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f3eb6215cf11d56290e6975db6695ff') in 0.022307 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 8.673747 seconds.
+  path: Assets/Assets/medicina y llave/Packages/STANDARD.unitypackage
+  artifactKey: Guid(6b8e515feeea94146abfa4bfb7636534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Packages/STANDARD.unitypackage using Guid(6b8e515feeea94146abfa4bfb7636534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '173c78e4267c1258ea0faa8804d3e6ff') in 0.001919 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 11.379794 seconds.
+  path: Assets/InstantZoomies/HorrorStarterPackFREE/Materials/Key.mat
+  artifactKey: Guid(39d51b5a16ce53748abdfa95d0385b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InstantZoomies/HorrorStarterPackFREE/Materials/Key.mat using Guid(39d51b5a16ce53748abdfa95d0385b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95c32eb434da6c8c3e07759f54ba3e6e') in 0.095843 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/InstantZoomies/HorrorStarterPackFREE/Materials/Shackles.mat
+  artifactKey: Guid(02d8c5b1e322426458011589527807f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InstantZoomies/HorrorStarterPackFREE/Materials/Shackles.mat using Guid(02d8c5b1e322426458011589527807f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ec3d1071a4bb3b78082bae223a8fa53') in 0.024067 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/InstantZoomies/HorrorStarterPackFREE/Materials/SyringeTube.mat
+  artifactKey: Guid(4d60bf9b49916fb4582262652694a103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InstantZoomies/HorrorStarterPackFREE/Materials/SyringeTube.mat using Guid(4d60bf9b49916fb4582262652694a103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82d6b155d0f4048db8eeea582b2b2ab7') in 0.375452 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/InstantZoomies/HorrorStarterPackFREE/Materials/SyringeBody.mat
+  artifactKey: Guid(6c7a2e2a53a62d2499829f64309793d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InstantZoomies/HorrorStarterPackFREE/Materials/SyringeBody.mat using Guid(6c7a2e2a53a62d2499829f64309793d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '674a6cdc8a0fe37781f437f04c0d58f5') in 0.024285 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 11.182509 seconds.
+  path: Assets/Assets/medicina y llave/Prefabs/Key.prefab
+  artifactKey: Guid(1436513f7b239264f9d74995c0c0b042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Prefabs/Key.prefab using Guid(1436513f7b239264f9d74995c0c0b042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '056819f6edccd72e78c3d476ebcd75f0') in 0.044506 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Assets/medicina y llave/Prefabs/Shackles.prefab
+  artifactKey: Guid(fee817ac98ecc8b4b9ca68c23f1f9cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Prefabs/Shackles.prefab using Guid(fee817ac98ecc8b4b9ca68c23f1f9cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37555827726f4f909810da738ac65058') in 0.038734 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 100
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Assets/medicina y llave/Prefabs/PictureFrame.prefab
+  artifactKey: Guid(13a357fe81add31459f3a36bf2c7ff7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/medicina y llave/Prefabs/PictureFrame.prefab using Guid(13a357fe81add31459f3a36bf2c7ff7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e476a785d9e77f3f799cc0c26b0cd31f') in 0.083432 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 38
