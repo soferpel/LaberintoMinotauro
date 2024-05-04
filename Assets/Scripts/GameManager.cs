@@ -31,6 +31,16 @@ public class GameManager : MonoBehaviour
         return current.ghost;
     }
 
+    public static int getDash()
+    {
+        return current.dash;
+    }
+
+    public static int getTeleport()
+    {
+        return current.teleport;
+    }
+
     public static void updateDash()
     {
         if(current == null) return;
