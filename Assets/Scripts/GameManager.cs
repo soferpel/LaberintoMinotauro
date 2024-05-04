@@ -26,11 +26,22 @@ public class GameManager : MonoBehaviour
         StartGame();
     }
 
+    public static int getGhost()
+    {
+        return current.ghost;
+    }
 
     public static void updateDash()
     {
         if(current == null) return;
         current.dash += 1;
+        UIManager.updateDashUI(current.dash);
+    }
+
+    public static void reduceDash()
+    {
+        if(current == null) return;
+        current.dash -= 1;
         UIManager.updateDashUI(current.dash);
     }
 
@@ -41,10 +52,24 @@ public class GameManager : MonoBehaviour
         UIManager.updateGhostUI(current.ghost);
     }
 
+    public static void reduceGhost()
+    {
+        if(current == null) return;
+        current.ghost -= 1;
+        UIManager.updateGhostUI(current.ghost);
+    }
+
     public static void updateTeleport()
     {
         if(current == null) return;
         current.teleport += 1;
+        UIManager.updateTeleporthUI(current.teleport);
+    }
+
+    public static void reduceTeleport()
+    {
+        if(current == null) return;
+        current.teleport -= 1;
         UIManager.updateTeleporthUI(current.teleport);
     }
 

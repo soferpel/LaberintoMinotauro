@@ -9,7 +9,6 @@ public class dahsPotion : MonoBehaviour
     void Start()
     {
         playerLayer = LayerMask.NameToLayer("Player");
-        Debug.Log(playerLayer);
     }
 
     void OnCollisionEnter(Collision collision)

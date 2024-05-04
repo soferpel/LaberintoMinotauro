@@ -10,8 +10,9 @@ public class ghostAbility : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && GameManager.getGhost() > 0)
         {
+            GameManager.reduceGhost();
             StartCoroutine(ghostActivate());
         }
     }
