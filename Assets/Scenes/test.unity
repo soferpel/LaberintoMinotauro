@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 14771641}
   - component: {fileID: 14771642}
+  - component: {fileID: 14771643}
   m_Layer: 0
   m_Name: mapa
   m_TagString: Untagged
@@ -149,7 +150,7 @@ Transform:
   m_GameObject: {fileID: 14771640}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0344372, y: 1.1616951, z: -14.829012}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -189,6 +190,21 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 603606a6c4bd4cf42819396087b915d1, type: 2}
   m_BuildHeightMesh: 0
+--- !u!114 &14771643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14771640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f936cdb9799dcb4a921cb98d3e0e707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 1083432238}
+  objectAmount: 20
+  spawnArea: {x: 150, y: 150}
 --- !u!1001 &123271646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1544,7 +1560,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 11.757544, y: -1.1616951, z: 12.669149}
-  m_LocalScale: {x: 15.8376, y: 15.8376, z: 15.8376}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 14771641}
