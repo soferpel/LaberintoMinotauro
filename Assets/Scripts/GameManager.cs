@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     int dash;
     int ghost;
     int teleport;
+    float visibility;
 
     void Awake()
     {
@@ -39,6 +40,16 @@ public class GameManager : MonoBehaviour
     public static int getTeleport()
     {
         return current.teleport;
+    }
+
+    public static void updateDamage()
+    {
+        if(current == null) return;
+        current.visibility += 0.01f;
+        if(current.visibility < 255)
+        {
+            UIManager.updateDamageVisibilityUI(current.visibility);
+        }
     }
 
     public static void updateDash()

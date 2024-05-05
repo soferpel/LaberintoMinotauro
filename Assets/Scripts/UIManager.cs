@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class UIManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI dashText;
     public TextMeshProUGUI ghostText;
     public TextMeshProUGUI teleportText;
+    public Image bloodEffectImage;
 
     void Awake()
     {
@@ -19,6 +21,12 @@ public class UIManager : MonoBehaviour
         }
         current = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    public static void updateDamageVisibilityUI(float visiblity)
+    {
+        Color c = new Color(255, 255, 255, visiblity);
+        current.bloodEffectImage.color = c;
     }
 
     public static void updateDashUI(int dashCount)
