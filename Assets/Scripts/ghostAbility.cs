@@ -7,14 +7,26 @@ public class ghostAbility : MonoBehaviour
     public float time = 3f;
     private bool activate = false;
     private List<Collider> ignorerWalls = new List<Collider>();
+    public GameObject particleSystemObject;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1) && GameManager.getGhost() > 0)
         {
             GameManager.reduceGhost();
+            ActivateParticleEffect();
             StartCoroutine(ghostActivate());
         }
+    }
+
+    void ActivateParticleEffect()
+    {
+        particleSystemObject.SetActive(true);
+    }
+
+    void DeactivateParticleEffect()
+    {
+        particleSystemObject.SetActive(false);
     }
 
     IEnumerator ghostActivate()
@@ -24,7 +36,6 @@ public class ghostAbility : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         activate = false;
-
         finishAbility();
     }
 
@@ -48,6 +59,7 @@ public class ghostAbility : MonoBehaviour
             }
         }
         ignorerWalls.Clear();
+        DeactivateParticleEffect(); 
     }
 
 

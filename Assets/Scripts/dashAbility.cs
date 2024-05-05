@@ -5,16 +5,38 @@ using UnityEngine;
 public class dashAbility : MonoBehaviour
 {
     public float dashDistance = 5f;
+    public float timeToDash = 3f;
     public LayerMask groundLayer;
     public float dashForce = 10f;
+    public GameObject particleSystemObject;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha3) && GameManager.getDash() > 0)
         {
-            dash();
-            GameManager.reduceDash();
+            StartCoroutine(dashActivate());
         }
+    }
+
+    void ActivateParticleEffect()
+    {
+        particleSystemObject.SetActive(true);
+    }
+
+    void DeactivateParticleEffect()
+    {
+        particleSystemObject.SetActive(false);
+    }
+
+    IEnumerator dashActivate()
+    {
+        ActivateParticleEffect();
+
+        yield return new WaitForSeconds(timeToDash);
+
+        dash();
+        GameManager.reduceDash();
+        DeactivateParticleEffect();
     }
 
     void dash()

@@ -5,15 +5,37 @@ using UnityEngine;
 public class teleportAbility : MonoBehaviour
 {
     public float teleportRadius = 5f;
+    public float timeToTeleport = 3f;
     public LayerMask groundLayer;
+    public GameObject particleSystemObject;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha2) && GameManager.getTeleport() > 0)
         {
-            Teleport();
-            GameManager.reduceTeleport();
+            StartCoroutine(teleportActivate());
         }
+    }
+
+    void ActivateParticleEffect()
+    {
+        particleSystemObject.SetActive(true);
+    }
+
+    void DeactivateParticleEffect()
+    {
+        particleSystemObject.SetActive(false);
+    }
+
+    IEnumerator teleportActivate()
+    {
+        ActivateParticleEffect();
+
+        yield return new WaitForSeconds(timeToTeleport);
+
+        Teleport();
+        GameManager.reduceTeleport();
+        DeactivateParticleEffect();
     }
 
     void Teleport()
