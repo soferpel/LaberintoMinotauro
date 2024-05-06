@@ -6,8 +6,15 @@ public class ghostAbility : MonoBehaviour
 {
     public float time = 3f;
     private bool activate = false;
+    private bool isBorder = false;
     private List<Collider> ignorerWalls = new List<Collider>();
     public GameObject particleSystemObject;
+    int borderLayer;
+
+    void Start()
+    {
+        borderLayer = LayerMask.NameToLayer("Border");
+    }
 
     void Update()
     {
@@ -41,7 +48,16 @@ public class ghostAbility : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (activate)
+        if(collision.gameObject.layer == borderLayer)
+        {
+            isBorder = true;
+        }
+        else
+        {
+            isBorder = false;
+        }
+
+        if (activate && !isBorder)
         {
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
             ignorerWalls.Add(collision.collider);

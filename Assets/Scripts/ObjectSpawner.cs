@@ -6,7 +6,7 @@ public class ObjectSpawner : MonoBehaviour
 {
     public GameObject objectPrefab;
     public int objectAmount;
-    public Vector2 spawnArea;
+    public GameObject plano;
 
     void Start()
     {
@@ -15,19 +15,15 @@ public class ObjectSpawner : MonoBehaviour
 
     void SpawnObjects()
     {
+        Vector3 planoSize = plano.GetComponent<Renderer>().bounds.size;
+        
         for (int i = 0; i < objectAmount; i++)
         {
-            Vector3 randomPosition = new Vector3(Random.Range(-spawnArea.x / 2, spawnArea.x / 2), 0.0f, Random.Range(-spawnArea.y / 2, spawnArea.y / 2));
+            float randomX = Random.Range(-planoSize.x / 2, planoSize.x / 2);
+            float randomZ = Random.Range(-planoSize.z / 2, planoSize.z / 2);
+            Vector3 randomPosition = new Vector3(randomX, plano.transform.position.y, randomZ);
 
-            RaycastHit hit;
-            if (Physics.Raycast(randomPosition + Vector3.up * 10.0f, Vector3.down, out hit, 100.0f, LayerMask.GetMask("Ground")))
-            {
-                Instantiate(objectPrefab, hit.point, Quaternion.identity);
-            }
-            else
-            {
-                i--;
-            }
+            Instantiate(objectPrefab, randomPosition, Quaternion.identity);
         }
     }
 }

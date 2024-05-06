@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1516,7 +1516,7 @@ GameObject:
   - component: {fileID: 74663140}
   - component: {fileID: 74663139}
   - component: {fileID: 74663138}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -1726,7 +1726,7 @@ GameObject:
   - component: {fileID: 96786235}
   - component: {fileID: 96786234}
   - component: {fileID: 96786233}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -4400,6 +4400,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: potion_ghost
       objectReference: {fileID: 0}
+    - target: {fileID: 1437462609998507232, guid: 95abe4efc8ac38249a89ed1c49f1c3de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2981808127744101195, guid: 95abe4efc8ac38249a89ed1c49f1c3de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.7
@@ -5024,6 +5028,10 @@ PrefabInstance:
     - target: {fileID: 10430633021337957, guid: 74ae8c1ef5f1c5f43a8da57dcaa66d8f, type: 3}
       propertyPath: m_Name
       value: potion_dash
+      objectReference: {fileID: 0}
+    - target: {fileID: 10430633021337957, guid: 74ae8c1ef5f1c5f43a8da57dcaa66d8f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7087827829254964764, guid: 74ae8c1ef5f1c5f43a8da57dcaa66d8f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5842,7 +5850,7 @@ GameObject:
   - component: {fileID: 512358442}
   - component: {fileID: 512358441}
   - component: {fileID: 512358440}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -8678,7 +8686,7 @@ GameObject:
   - component: {fileID: 824657294}
   - component: {fileID: 824657293}
   - component: {fileID: 824657292}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -10880,7 +10888,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1073032751}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15454,7 +15462,7 @@ Transform:
   m_GameObject: {fileID: 1451529476}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7456276, z: -0, w: 0.666363}
-  m_LocalPosition: {x: -4.89, y: -0.91, z: 43.52}
+  m_LocalPosition: {x: -4.89, y: -26.2, z: 43.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18293,7 +18301,7 @@ Transform:
   m_GameObject: {fileID: 1736777376}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.715014, y: -40.078854, z: 28.72969}
+  m_LocalPosition: {x: 21.715014, y: -42.1, z: 28.72969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18346,8 +18354,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 1839682016}
-  objectAmount: 10
-  spawnArea: {x: 80, y: 100}
+  objectAmount: 20
+  plano: {fileID: 610611276}
 --- !u!114 &1736777380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18361,8 +18369,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 356186160}
-  objectAmount: 10
-  spawnArea: {x: 80, y: 100}
+  objectAmount: 20
+  plano: {fileID: 610611276}
 --- !u!114 &1736777381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18376,8 +18384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 380055482}
-  objectAmount: 10
-  spawnArea: {x: 80, y: 100}
+  objectAmount: 20
+  plano: {fileID: 610611276}
 --- !u!1 &1742237705
 GameObject:
   m_ObjectHideFlags: 0
@@ -19174,7 +19182,7 @@ Transform:
   m_GameObject: {fileID: 1781337699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 1.58, y: 1.91, z: 49.1}
+  m_LocalPosition: {x: 1.58, y: 2.45, z: 49.1}
   m_LocalScale: {x: 1, y: 0.97195, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19901,6 +19909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: potion_teleport
       objectReference: {fileID: 0}
+    - target: {fileID: 6831759023959867654, guid: 0b217b1e175294548981db07e0d45c19, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7165680829192721898, guid: 0b217b1e175294548981db07e0d45c19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.9
@@ -20298,7 +20310,7 @@ GameObject:
   - component: {fileID: 1885241430}
   - component: {fileID: 1885241429}
   - component: {fileID: 1885241428}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall
   m_TagString: wall
   m_Icon: {fileID: 0}
