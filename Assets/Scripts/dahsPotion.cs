@@ -5,6 +5,7 @@ using UnityEngine;
 public class dahsPotion : MonoBehaviour
 {
     int playerLayer;
+    public AudioClip pickupSound;
 
     void Start()
     {
@@ -14,6 +15,7 @@ public class dahsPotion : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.layer != playerLayer) return;
+        soundEffects.current.playSound(pickupSound);
         GameManager.updateDash();
         gameObject.SetActive(false);
     }
