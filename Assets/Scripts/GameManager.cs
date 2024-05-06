@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
     static GameManager current;
+    bool isAbilityActivate = false;
     int dash;
     int ghost;
     int teleport;
@@ -25,6 +26,16 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartGame();
+    }
+
+    public static bool setAbilityStatus(bool status)
+    {
+        return current.isAbilityActivate = status;
+    }
+
+    public static bool getAbilityStatus()
+    {
+        return current.isAbilityActivate;
     }
 
     public static int getGhost()

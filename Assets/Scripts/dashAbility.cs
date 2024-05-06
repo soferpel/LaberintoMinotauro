@@ -12,8 +12,9 @@ public class dashAbility : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha3) && GameManager.getDash() > 0)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && GameManager.getDash() > 0 && !GameManager.getAbilityStatus())
         {
+            GameManager.setAbilityStatus(true);
             StartCoroutine(dashActivate());
         }
     }
@@ -37,6 +38,7 @@ public class dashAbility : MonoBehaviour
         dash();
         GameManager.reduceDash();
         DeactivateParticleEffect();
+        GameManager.setAbilityStatus(false);
     }
 
     void dash()
@@ -49,10 +51,6 @@ public class dashAbility : MonoBehaviour
             {
                 rb.AddForce(transform.forward * dashForce, ForceMode.Impulse);
             }
-        }
-        else
-        {
-            Debug.Log("No se pudo encontrar una posición válida para el impulso hacia adelante.");
         }
     }
 

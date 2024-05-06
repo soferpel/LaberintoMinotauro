@@ -11,8 +11,9 @@ public class teleportAbility : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha2) && GameManager.getTeleport() > 0)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && GameManager.getTeleport() > 0 && !GameManager.getAbilityStatus())
         {
+            GameManager.setAbilityStatus(true);
             StartCoroutine(teleportActivate());
         }
     }
@@ -36,6 +37,7 @@ public class teleportAbility : MonoBehaviour
         Teleport();
         GameManager.reduceTeleport();
         DeactivateParticleEffect();
+        GameManager.setAbilityStatus(false);
     }
 
     void Teleport()
@@ -44,10 +46,6 @@ public class teleportAbility : MonoBehaviour
         if (IsValidPosition(randomPosition))
         {
             transform.position = randomPosition;
-        }
-        else
-        {
-            Debug.Log("No se pudo encontrar una posición válida para teletransportarse.");
         }
     }
 

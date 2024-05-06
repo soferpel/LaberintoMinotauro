@@ -18,8 +18,9 @@ public class ghostAbility : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && GameManager.getGhost() > 0)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && GameManager.getGhost() > 0 && !GameManager.getAbilityStatus())
         {
+            GameManager.setAbilityStatus(true);
             GameManager.reduceGhost();
             ActivateParticleEffect();
             StartCoroutine(ghostActivate());
@@ -76,6 +77,7 @@ public class ghostAbility : MonoBehaviour
         }
         ignorerWalls.Clear();
         DeactivateParticleEffect(); 
+        GameManager.setAbilityStatus(false);
     }
 
 
