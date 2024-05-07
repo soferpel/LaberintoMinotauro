@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4346,6 +4346,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1437462609998507232, guid: 95abe4efc8ac38249a89ed1c49f1c3de, type: 3}
       insertIndex: -1
       addedObject: {fileID: 356186161}
+    - targetCorrespondingSourceObject: {fileID: 1437462609998507232, guid: 95abe4efc8ac38249a89ed1c49f1c3de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 356186162}
   m_SourcePrefab: {fileID: 100100000, guid: 95abe4efc8ac38249a89ed1c49f1c3de, type: 3}
 --- !u!4 &356186159 stripped
 Transform:
@@ -4370,6 +4373,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupSound: {fileID: 8300000, guid: a727b6585fc3b3546bd4d054c9f8a80a, type: 3}
+--- !u!65 &356186162
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356186160}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5000001, y: 0.69007194, z: 0.5000001}
+  m_Center: {x: 0, y: 0.19503595, z: 0}
 --- !u!1 &363915524
 GameObject:
   m_ObjectHideFlags: 0
@@ -4974,6 +4998,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 10430633021337957, guid: 74ae8c1ef5f1c5f43a8da57dcaa66d8f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 380055483}
+    - targetCorrespondingSourceObject: {fileID: 10430633021337957, guid: 74ae8c1ef5f1c5f43a8da57dcaa66d8f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 380055484}
   m_SourcePrefab: {fileID: 100100000, guid: 74ae8c1ef5f1c5f43a8da57dcaa66d8f, type: 3}
 --- !u!4 &380055481 stripped
 Transform:
@@ -4998,6 +5025,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupSound: {fileID: 8300000, guid: a727b6585fc3b3546bd4d054c9f8a80a, type: 3}
+--- !u!65 &380055484
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380055482}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.42700183, y: 0.7, z: 0.48669133}
+  m_Center: {x: 0.0000019073486, y: 0.099999994, z: 0.0000019073486}
 --- !u!1 &408139704
 GameObject:
   m_ObjectHideFlags: 0
@@ -19946,6 +19994,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6831759023959867654, guid: 0b217b1e175294548981db07e0d45c19, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1839682017}
+    - targetCorrespondingSourceObject: {fileID: 6831759023959867654, guid: 0b217b1e175294548981db07e0d45c19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1839682018}
   m_SourcePrefab: {fileID: 100100000, guid: 0b217b1e175294548981db07e0d45c19, type: 3}
 --- !u!4 &1839682015 stripped
 Transform:
@@ -19970,6 +20021,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupSound: {fileID: 8300000, guid: a727b6585fc3b3546bd4d054c9f8a80a, type: 3}
+--- !u!65 &1839682018
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839682016}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.36000007, y: 0.725, z: 0.3600001}
+  m_Center: {x: 0.0000019073486, y: 0.11250003, z: -0.00000093877316}
 --- !u!1 &1854478355
 GameObject:
   m_ObjectHideFlags: 0
