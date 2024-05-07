@@ -5,15 +5,20 @@ using UnityEngine;
 
 public class chest : MonoBehaviour
 {
-    public Animator chestAnimator; // Referencia al Animator del cofre
+    public Animator chestAnimator;
+    public GameObject player;
+    public float distanciaActivacion = 3f;
 
-    void Update()
+    private void Update()
     {
-        // Verificar si se hace clic derecho
-        if (Input.GetMouseButtonDown(1))
+        // Verificar si el jugador está lo suficientemente cerca del cofre y presiona la tecla Espacio
+        if (Input.GetKeyDown(KeyCode.Space) && Vector3.Distance(transform.position, player.transform.position) <= distanciaActivacion)
         {
-            // Reproducir la animación de apertura del cofre
-            chestAnimator.SetTrigger("Open");
+            // Activar la animación de cerrar el cofre si el Animator y la animación están disponibles
+            if (chestAnimator != null)
+            {
+                chestAnimator.SetBool("isClosed", true);
+            }
         }
     }
 }
