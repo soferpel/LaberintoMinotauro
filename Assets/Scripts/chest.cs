@@ -5,20 +5,45 @@ using UnityEngine;
 
 public class chest : MonoBehaviour
 {
-    public Animator chestAnimator;
-    public GameObject player;
-    public float distanciaActivacion = 3f;
 
-    private void Update()
+    public bool interactable = false;
+    private Animator anim;
+
+    // Use this for initialization of script
+    void Start()
     {
-        // Verificar si el jugador está lo suficientemente cerca del cofre y presiona la tecla Espacio
-        if (Input.GetKeyDown(KeyCode.Space) && Vector3.Distance(transform.position, player.transform.position) <= distanciaActivacion)
+        anim = GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Si el jugador está cerca y presiona la tecla Espacio
+        if (interactable && Input.GetKeyDown(KeyCode.Space))
         {
-            // Activar la animación de cerrar el cofre si el Animator y la animación están disponibles
-            if (chestAnimator != null)
-            {
-                chestAnimator.SetBool("isClosed", true);
-            }
+            // Abrir el cofre
+            anim.SetBool("openChest", true);
+
+        }
+    }
+
+    // Cuando el jugador entra en el área de activación
+    void OnTriggerEnter(Collider other)
+    {
+        // Verificar si el objeto que entra es el jugador
+        if (other.gameObject.CompareTag("Player"))
+        {
+            interactable = true;
+        }
+    }
+
+    // Cuando el jugador sale del área de activación
+    void OnTriggerExit(Collider other)
+    {
+        // Verificar si el objeto que sale es el jugador
+        if (other.gameObject.CompareTag("Player"))
+        {
+            interactable = false;
         }
     }
 }
