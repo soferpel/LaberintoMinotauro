@@ -30485,7 +30485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd3dc598e1d2295498bd91282386b407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 500
+  sensitivity: 400
   playerBody: {fileID: 1781337708}
 --- !u!81 &1074081851
 AudioListener:
