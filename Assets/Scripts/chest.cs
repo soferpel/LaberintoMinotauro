@@ -27,20 +27,16 @@ public class chest : MonoBehaviour
         }
     }
 
-    // Cuando el jugador entra en el área de activación
     void OnTriggerEnter(Collider other)
     {
-        // Verificar si el objeto que entra es el jugador
         if (other.gameObject.CompareTag("Player"))
         {
             interactable = true;
         }
     }
 
-    // Cuando el jugador sale del área de activación
     void OnTriggerExit(Collider other)
     {
-        // Verificar si el objeto que sale es el jugador
         if (other.gameObject.CompareTag("Player"))
         {
             interactable = false;
