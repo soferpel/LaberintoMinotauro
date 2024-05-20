@@ -211,8 +211,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\r\n\xA1Felicidades has completado el laberinto!\r\n\r\n\r\n\xBFListo
-    para el siguiente desaf\xEDo? \xA1Haz clic para descubrir m\xE1s aventuras!"
+  m_text: "\r\n\xA1Felicidades has completado el laberinto!\r\n\r\n\r\n\xA1Haz clic
+    para continuar!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4fc662de9e06e474a9c12416d7e63613, type: 2}
   m_sharedMaterial: {fileID: 5620408864069255169, guid: 4fc662de9e06e474a9c12416d7e63613, type: 2}
