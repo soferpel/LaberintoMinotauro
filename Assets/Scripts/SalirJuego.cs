@@ -8,8 +8,8 @@ public class SalirJuego : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Check if the player presses the Escape key
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // Check if the player clicks the mouse button (left click)
+        if (Input.GetMouseButtonDown(0))
         {
             // Load the MainMenu scene
             SceneManager.LoadScene("MainMenu");
