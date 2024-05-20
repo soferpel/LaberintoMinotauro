@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class SalirJuego : MonoBehaviour
 {
-    public void Salir()
+    // Update is called once per frame
+    void Update()
     {
-        Application.Quit();
+        // Check if the player presses the Escape key
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Load the MainMenu scene
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }
