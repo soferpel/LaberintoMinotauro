@@ -18,7 +18,7 @@ public class ghostAbility : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && GameManager.getGhost() > 0 && !GameManager.getAbilityStatus())
+        if (Input.GetKeyDown(KeyCode.Alpha2) && GameManager.getGhost() > 0 && !GameManager.getAbilityStatus())
         {
             GameManager.setAbilityStatus(true);
             GameManager.reduceGhost();

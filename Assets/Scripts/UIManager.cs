@@ -25,7 +25,8 @@ public class UIManager : MonoBehaviour
 
     public static void updateDamageVisibilityUI(float visiblity)
     {
-        Color c = new Color(255, 255, 255, visiblity);
+        Color c = current.bloodEffectImage.color;
+        c.a = visiblity / 255f;
         current.bloodEffectImage.color = c;
     }
 

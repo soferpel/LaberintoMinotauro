@@ -56,11 +56,12 @@ public class GameManager : MonoBehaviour
     public static void updateDamage()
     {
         if(current == null) return;
-        current.visibility += 0.01f;
-        if(current.visibility < 255)
+        current.visibility += 40f;
+        if (current.visibility > 255f)
         {
-            UIManager.updateDamageVisibilityUI(current.visibility);
+            current.visibility = 255f;
         }
+        UIManager.updateDamageVisibilityUI(current.visibility);
     }
 
     public static void updateDash()
@@ -113,5 +114,6 @@ public class GameManager : MonoBehaviour
         UIManager.updateGhostUI(current.ghost);
         current.teleport = 0;
         UIManager.updateTeleporthUI(current.teleport);
+        current.visibility = 0f;
     }
 }

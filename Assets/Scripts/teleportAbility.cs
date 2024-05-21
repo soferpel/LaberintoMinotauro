@@ -11,7 +11,7 @@ public class teleportAbility : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha2) && GameManager.getTeleport() > 0 && !GameManager.getAbilityStatus())
+        if (Input.GetKeyDown(KeyCode.Alpha1) && GameManager.getTeleport() > 0 && !GameManager.getAbilityStatus())
         {
             GameManager.setAbilityStatus(true);
             StartCoroutine(teleportActivate());

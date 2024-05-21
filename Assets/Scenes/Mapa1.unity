@@ -32853,9 +32853,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1781337708}
   Velocity: 5
-  timeToHit: 3
+  velocityDecrese: 2.5
   IA: {fileID: 1112405919}
   anim: {fileID: 1535768184}
+  timeToHit: 3
 --- !u!4 &1112405921
 Transform:
   m_ObjectHideFlags: 0
@@ -47254,7 +47255,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4414871117303439921, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1535768187}
   m_SourcePrefab: {fileID: 100100000, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
 --- !u!95 &1535768184 stripped
 Animator:
@@ -47266,6 +47270,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
   m_PrefabInstance: {fileID: 1535768183}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1535768186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4414871117303439921, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+  m_PrefabInstance: {fileID: 1535768183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1535768187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535768186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50c1573d662e6464fab1260577a3e92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1112405920}
 --- !u!1001 &1538684859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55219,7 +55241,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.21666665
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 3cf1d944335000e48b39b66c845f86ec, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 05fb17de6fbc01b46802689a978b19a8, type: 2}
   m_BuildHeightMesh: 0
 --- !u!114 &1736777382
 MonoBehaviour:
@@ -56864,7 +56886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashDistance: 10
-  timeToDash: 3
+  timeToDash: 1.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64

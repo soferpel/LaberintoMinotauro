@@ -7,22 +7,16 @@ public class EnemyInteligent : MonoBehaviour
 {
     public Transform target;
     public float Velocity;
-    public float timeToHit = 1f;
+    public float velocityDecrese;
     public NavMeshAgent IA;
     public Animator anim;
+    public float timeToHit = 5f;
 
     void Update()
     {
-        float distance = Vector3.Distance(target.position, transform.position);
-        Debug.Log(distance);
         IA.speed = Velocity;
         IA.SetDestination(target.position);
         updateAnimations();
-        if(distance > 0 && distance < 2.05)
-        {
-            StartCoroutine(hitActivate());
-        }
-
     }
 
     void updateAnimations()
@@ -33,16 +27,21 @@ public class EnemyInteligent : MonoBehaviour
         anim.SetFloat("Speed", speed1, 0.1f, Time.deltaTime);
     }
 
-    IEnumerator hitActivate()
-    {
+   public  void hitPlayer()
+   {
+        float distance = Vector3.Distance(target.position, transform.position);
+        if (distance < 2.1)
+        {
+            StartCoroutine(hitActivate());
+        }
+   }
 
-        yield return new WaitForSeconds(timeToHit);
-
-        hitPlayer();
-    }
-
-    void hitPlayer()
-    {
+   IEnumerator hitActivate()
+   {
+        Velocity -= velocityDecrese;
         GameManager.updateDamage();
-    }
+        yield return new WaitForSeconds(timeToHit);
+        Velocity += velocityDecrese;
+   }
+
 }
