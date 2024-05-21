@@ -23,7 +23,8 @@ public class chest : MonoBehaviour
         {
             // Abrir el cofre
             anim.SetBool("openChest", true);
-
+            // Iniciar la corrutina para cerrar el cofre después de 5 segundos
+            StartCoroutine(CloseChestAfterDelay(4f));
         }
     }
 
@@ -41,5 +42,13 @@ public class chest : MonoBehaviour
         {
             interactable = false;
         }
+    }
+
+    private IEnumerator CloseChestAfterDelay(float delay)
+    {
+        // Esperar por el tiempo especificado
+        yield return new WaitForSeconds(delay);
+        // Cerrar el cofre
+        anim.SetBool("openChest", false);
     }
 }
