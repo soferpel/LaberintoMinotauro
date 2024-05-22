@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour
     int dash;
     int ghost;
     int teleport;
+    int injector;
     float visibility;
+    int hitNumber;
 
     void Awake()
     {
@@ -53,13 +55,57 @@ public class GameManager : MonoBehaviour
         return current.teleport;
     }
 
+    public static int getInjector()
+    {
+        return current.injector;
+    }
+
+    public static int getHits()
+    {
+        return current.hitNumber;
+    }
+
+    public static int setHits(int hits)
+    {
+        if (current == null) return 0;
+        current.hitNumber -= hits;
+        heal();
+        return current.hitNumber;
+    }
+
     public static void updateDamage()
     {
         if(current == null) return;
-        current.visibility += 40f;
-        if (current.visibility > 255f)
+        if (current.hitNumber == 0 && current.visibility < 255f)
+        {
+            current.visibility = 25f;
+        }
+        else if (current.hitNumber == 1 && current.visibility < 255f)
+        {
+            current.visibility = 125f;
+        }
+        else if (current.hitNumber == 2 && current.visibility < 255f)
         {
             current.visibility = 255f;
+        }
+        else
+        {
+            current.visibility = 255f;
+        }
+        current.hitNumber += 1;
+        UIManager.updateDamageVisibilityUI(current.visibility);
+    }
+
+    public static void heal()
+    {
+        if(current == null) return;
+        if (current.hitNumber == 0 && current.visibility < 255f)
+        {
+            current.visibility = 25f;
+        }
+        else if (current.hitNumber == 1 && current.visibility < 255f)
+        {
+            current.visibility = 125f;
         }
         UIManager.updateDamageVisibilityUI(current.visibility);
     }
@@ -106,6 +152,20 @@ public class GameManager : MonoBehaviour
         UIManager.updateTeleporthUI(current.teleport);
     }
 
+    public static void updateInjector()
+    {
+        if(current == null) return;
+        current.injector += 1;
+        UIManager.updateInjectorUI(current.injector);
+    }
+
+    public static void reduceInjector()
+    {
+        if(current == null) return;
+        current.injector -= 1;
+        UIManager.updateInjectorUI(current.injector);
+    }
+
     void StartGame()
     {
         current.dash = 0;
@@ -114,6 +174,8 @@ public class GameManager : MonoBehaviour
         UIManager.updateGhostUI(current.ghost);
         current.teleport = 0;
         UIManager.updateTeleporthUI(current.teleport);
+        current.hitNumber = 0;
+        UIManager.updateInjectorUI(current.injector);
         current.visibility = 0f;
     }
 }

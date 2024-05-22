@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI dashText;
     public TextMeshProUGUI ghostText;
     public TextMeshProUGUI teleportText;
+    public TextMeshProUGUI injectorText;
     public Image bloodEffectImage;
 
     void Awake()
@@ -46,5 +47,11 @@ public class UIManager : MonoBehaviour
     {
         if(current == null) return;
         current.teleportText.text = teleportCount.ToString();
+    }
+
+    public static void updateInjectorUI(int injectorCount)
+    {
+        if(current == null) return;
+        current.injectorText.text = injectorCount.ToString();
     }
 }
