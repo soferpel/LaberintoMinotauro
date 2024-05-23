@@ -4,26 +4,46 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    public GameObject objectPrefab;
-    public int objectAmount;
-    public GameObject plano;
+    public GameObject objectToSpawn;
+    public LayerMask groundLayer;
+    public LayerMask wallLayer;
+    public float spawnHeight = 1.0f; 
+    public Vector2 planeSize;
 
     void Start()
     {
-        SpawnObjects();
+        SpawnObject();
     }
 
-    void SpawnObjects()
+    void SpawnObject()
     {
-        Vector3 planoSize = plano.GetComponent<Renderer>().bounds.size;
-        
-        for (int i = 0; i < objectAmount; i++)
-        {
-            float randomX = Random.Range(-planoSize.x / 2, planoSize.x / 2);
-            float randomZ = Random.Range(-planoSize.z / 2, planoSize.z / 2);
-            Vector3 randomPosition = new Vector3(randomX, plano.transform.position.y, randomZ);
+        Vector3 spawnPosition;
+        bool validPosition = false;
 
-            Instantiate(objectPrefab, randomPosition, Quaternion.identity);
+        for (int attempt = 0; attempt < 100; attempt++)
+        {
+            float x = Random.Range(-planeSize.x / 2, planeSize.x / 2);
+            float z = Random.Range(-planeSize.y / 2, planeSize.y / 2);
+            Vector3 randomPosition = new Vector3(x, 0, z);
+
+            if (Physics.Raycast(randomPosition + Vector3.up * 10, Vector3.down, out RaycastHit hit, Mathf.Infinity, groundLayer))
+            {
+                randomPosition = hit.point;
+
+                Collider[] colliders = Physics.OverlapSphere(randomPosition, 0.5f, wallLayer);
+                if (colliders.Length == 0)
+                {
+                    spawnPosition = randomPosition + Vector3.up * spawnHeight;
+                    Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+                    validPosition = true;
+                    break;
+                }
+            }
+        }
+
+        if (!validPosition)
+        {
+            Debug.LogWarning("No se pudo encontrar una posición válida para generar el objeto.");
         }
     }
 }

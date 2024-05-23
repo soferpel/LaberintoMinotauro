@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     int injector;
     float visibility;
     int hitNumber;
+    public GameObject portal;
 
     void Awake()
     {
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartGame();
+        current.portal.SetActive(false);
     }
 
     public static bool setAbilityStatus(bool status)
@@ -63,6 +65,11 @@ public class GameManager : MonoBehaviour
     public static int getHits()
     {
         return current.hitNumber;
+    }
+
+    public static void takeKey()
+    {
+        current.portal.SetActive(true);
     }
 
     public static int setHits(int hits)
