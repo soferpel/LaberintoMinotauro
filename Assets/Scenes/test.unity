@@ -202,9 +202,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f936cdb9799dcb4a921cb98d3e0e707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 1083432238}
-  objectAmount: 20
-  plano: {fileID: 965626977}
+  objectToSpawn: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  spawnHeight: 1
+  planeSize: {x: 0, y: 0}
 --- !u!1001 &64225773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1596,7 +1602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!195 &801610531
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3980,6 +3986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portal: {fileID: 759004904}
+  sceneName: MainMenu
 --- !u!1 &1909136361
 GameObject:
   m_ObjectHideFlags: 0

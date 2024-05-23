@@ -1,6 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
     float visibility;
     int hitNumber;
     public GameObject portal;
+    public string sceneName;
 
     void Awake()
     {
@@ -30,6 +32,14 @@ public class GameManager : MonoBehaviour
     {
         StartGame();
         current.portal.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (current.hitNumber >= 4)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 
     public static bool setAbilityStatus(bool status)

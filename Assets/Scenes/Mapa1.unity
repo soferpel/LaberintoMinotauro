@@ -5388,6 +5388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portal: {fileID: 1477283340}
+  sceneName: MainMenu
 --- !u!4 &151346486
 Transform:
   m_ObjectHideFlags: 0
