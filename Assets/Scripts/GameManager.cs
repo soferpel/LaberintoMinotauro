@@ -77,6 +77,10 @@ public class GameManager : MonoBehaviour
     public static void updateDamage(bool isAttacking)
     {
         if(current == null) return;
+        if (current.hitNumber <= 4 && isAttacking)
+        {
+            current.hitNumber += 1;
+        }
         if (current.hitNumber <= 0 && current.visibility <= 255f)
         {
             current.visibility = 0f;
@@ -93,11 +97,6 @@ public class GameManager : MonoBehaviour
         {
             current.visibility = 225f;
         }
-        if (current.hitNumber <= 4 && isAttacking)
-        {
-            current.hitNumber += 1;
-        }
-        Debug.Log(current.hitNumber);
         UIManager.updateDamageVisibilityUI(current.visibility);
     }
 

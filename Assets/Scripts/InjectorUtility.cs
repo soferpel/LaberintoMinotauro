@@ -10,7 +10,7 @@ public class InjectorUtility : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha4) && GameManager.getInjector() > 0 && !GameManager.getAbilityStatus())
+        if (Input.GetKeyDown(KeyCode.Alpha4) && GameManager.getInjector() > 0 && !GameManager.getAbilityStatus() && GameManager.getHits() > 0)
         {
             GameManager.setAbilityStatus(true);
             GameManager.reduceInjector();
