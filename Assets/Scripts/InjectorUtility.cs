@@ -10,8 +10,9 @@ public class InjectorUtility : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha4) && GameManager.getInjector() > 0 && GameManager.getHits() > 0)
+        if (Input.GetKeyDown(KeyCode.Alpha4) && GameManager.getInjector() > 0 && !GameManager.getAbilityStatus()
         {
+            GameManager.setAbilityStatus(true);
             GameManager.reduceInjector();
             StartCoroutine(injectorActivate());
         }
@@ -30,16 +31,9 @@ public class InjectorUtility : MonoBehaviour
     IEnumerator injectorActivate()
     {
         ActivateParticleEffect();
-        if (GameManager.getHits() == 1)
-        {
-            GameManager.setHits(heal);
-        }
-        else
-        {
-            GameManager.setHits(heal - 1);
-        }
+        GameManager.setHits(heal);
         yield return new WaitForSeconds(time);
-
+        GameManager.setAbilityStatus(false);
         DeactivateParticleEffect();
     }
 }

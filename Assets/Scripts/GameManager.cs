@@ -69,44 +69,35 @@ public class GameManager : MonoBehaviour
     {
         if (current == null) return 0;
         current.hitNumber -= hits;
-        heal();
+        updateDamage(false);
+        Debug.Log(current.hitNumber);
         return current.hitNumber;
     }
 
-    public static void updateDamage()
+    public static void updateDamage(bool isAttacking)
     {
         if(current == null) return;
-        if (current.hitNumber == 0 && current.visibility < 255f)
+        if (current.hitNumber <= 0 && current.visibility <= 255f)
+        {
+            current.visibility = 0f;
+        }
+        else if (current.hitNumber == 1 && current.visibility <= 255f)
         {
             current.visibility = 25f;
         }
-        else if (current.hitNumber == 1 && current.visibility < 255f)
+        else if (current.hitNumber == 2 && current.visibility <= 255f)
         {
             current.visibility = 125f;
         }
-        else if (current.hitNumber == 2 && current.visibility < 255f)
+        else if (current.hitNumber == 3 && current.visibility <= 255f)
         {
-            current.visibility = 255f;
+            current.visibility = 225f;
         }
-        else
+        if (current.hitNumber <= 4 && isAttacking)
         {
-            current.visibility = 255f;
+            current.hitNumber += 1;
         }
-        current.hitNumber += 1;
-        UIManager.updateDamageVisibilityUI(current.visibility);
-    }
-
-    public static void heal()
-    {
-        if(current == null) return;
-        if (current.hitNumber == 0 && current.visibility < 255f)
-        {
-            current.visibility = 25f;
-        }
-        else if (current.hitNumber == 1 && current.visibility < 255f)
-        {
-            current.visibility = 125f;
-        }
+        Debug.Log(current.hitNumber);
         UIManager.updateDamageVisibilityUI(current.visibility);
     }
 

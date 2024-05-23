@@ -39,7 +39,7 @@ public class EnemyInteligent : MonoBehaviour
    IEnumerator hitActivate()
    {
         Velocity -= velocityDecrese;
-        GameManager.updateDamage();
+        GameManager.updateDamage(true);
         yield return new WaitForSeconds(timeToHit);
         Velocity += velocityDecrese;
    }
