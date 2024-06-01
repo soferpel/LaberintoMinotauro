@@ -3267,7 +3267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd3dc598e1d2295498bd91282386b407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 400
+  sensitivity: 100
   playerBody: {fileID: 1328505623}
 --- !u!81 &82774497
 AudioListener:
@@ -5487,7 +5487,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portal: {fileID: 1477283340}
-  sceneName: MainMenu
 --- !u!4 &151346486
 Transform:
   m_ObjectHideFlags: 0

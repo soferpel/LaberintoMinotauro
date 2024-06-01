@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Mapa1.unity
     guid: a659d82d15eadbd4c9a81629161dcb47
   - enabled: 1
-    path: Assets/Scenes/Pause.unity
-    guid: c7dc5f07550bfb44e84a23268a50b090
-  - enabled: 1
     path: Assets/Scenes/Fin.unity
     guid: 5fdba87659d37e94abd813b756e0dad4
   - enabled: 1
