@@ -3,17 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class mainMenu : MonoBehaviour
+public class mainMenuInfo : MonoBehaviour
 {
     public void GameScene()
     {
-        SceneManager.LoadScene("MainMenuInfo");
-        
-    }
-
-    public void Quit()
-    {
-        Application.Quit();
+        SceneManager.LoadScene("Mapa1");
 
     }
+
 }
