@@ -22,14 +22,13 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Key
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_Parent: {fileID: 2100000, guid: f9de2e6b2b119ca429470090df4d86ac, type: 2}
+  m_Parent: {fileID: 2100000, guid: 4c2b2aaa2ae12954dbb9c9af0acc6cf3, type: 2}
   m_ModifiedSerializedProperties: 2
   m_ValidKeywords:
-  - _EMISSION
   - _METALLICGLOSSMAP
   m_InvalidKeywords:
   - _METALLICSPECGLOSSMAP
-  m_LightmapFlags: 2
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -50,5 +49,6 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _EmissionColor: {r: 0.5, g: 0.38124686, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

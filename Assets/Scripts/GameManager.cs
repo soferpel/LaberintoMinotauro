@@ -15,8 +15,7 @@ public class GameManager : MonoBehaviour
     float visibility;
     int hitNumber;
     public GameObject portal;
-    public string sceneName;
-
+ 
     void Awake()
     {
         if(current != null && current != this)
@@ -38,7 +37,7 @@ public class GameManager : MonoBehaviour
     {
         if (current.hitNumber >= 4)
         {
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene("MainMenuDeath");
         }
     }
 

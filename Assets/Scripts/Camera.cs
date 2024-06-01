@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    public float sensitivity = 100.0f;
+    public float sensitivity = 50.0f;
     public Transform playerBody;
 
     float xRotation = 0.0f;
