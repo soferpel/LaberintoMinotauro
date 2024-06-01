@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Key
+  m_Name: srynge glass
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 2100000, guid: f9de2e6b2b119ca429470090df4d86ac, type: 2}
   m_ModifiedSerializedProperties: 2
@@ -50,5 +50,5 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _EmissionColor: {r: 0.5, g: 0.38124686, b: 0, a: 1}
+    - _EmissionColor: {r: 0.2162549, g: 1.9648324, b: 0.22540988, a: 1}
   m_BuildTextureStacks: []
