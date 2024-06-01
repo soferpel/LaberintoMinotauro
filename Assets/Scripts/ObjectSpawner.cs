@@ -9,18 +9,18 @@ public class ObjectSpawner : MonoBehaviour
     public LayerMask wallLayer;
     public float spawnHeight = 1.0f; 
     public Vector2 planeSize;
+    public int objectCount = 10;
 
     void Start()
     {
-        SpawnObject();
+        SpawnObjects(objectCount);
     }
 
-    void SpawnObject()
+    void SpawnObjects(int count)
     {
-        Vector3 spawnPosition;
-        bool validPosition = false;
+        int spawnedObjects = 0;
 
-        for (int attempt = 0; attempt < 100; attempt++)
+        for (int attempt = 0; attempt < count * 100; attempt++)
         {
             float x = Random.Range(-planeSize.x / 2, planeSize.x / 2);
             float z = Random.Range(-planeSize.y / 2, planeSize.y / 2);
@@ -33,17 +33,21 @@ public class ObjectSpawner : MonoBehaviour
                 Collider[] colliders = Physics.OverlapSphere(randomPosition, 0.5f, wallLayer);
                 if (colliders.Length == 0)
                 {
-                    spawnPosition = randomPosition + Vector3.up * spawnHeight;
+                    Vector3 spawnPosition = randomPosition + Vector3.up * spawnHeight;
                     Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
-                    validPosition = true;
-                    break;
+                    spawnedObjects++;
+
+                    if (spawnedObjects >= count)
+                    {
+                        break;
+                    }
                 }
             }
         }
 
-        if (!validPosition)
+        if (spawnedObjects < count)
         {
-            Debug.LogWarning("No se pudo encontrar una posición válida para generar el objeto.");
+            Debug.LogWarning("No se pudo encontrar suficientes posiciones válidas para generar todos los objetos.");
         }
     }
 }

@@ -211,6 +211,7 @@ MonoBehaviour:
     m_Bits: 0
   spawnHeight: 1
   planeSize: {x: 0, y: 0}
+  objectCount: 10
 --- !u!1001 &64225773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -319,6 +320,10 @@ PrefabInstance:
     - target: {fileID: 9017484664307500583, guid: 1245b8d2997d5b34fb1637be70a7eb05, type: 3}
       propertyPath: m_Name
       value: Healing
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017484664307500583, guid: 1245b8d2997d5b34fb1637be70a7eb05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1811,7 +1816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd3dc598e1d2295498bd91282386b407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 1000
+  sensitivity: 400
   playerBody: {fileID: 1334676218}
 --- !u!81 &853117874
 AudioListener:
