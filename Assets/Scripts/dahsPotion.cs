@@ -14,10 +14,9 @@ public class dahsPotion : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.layer != playerLayer) return;
+        if (collision.gameObject.layer != playerLayer) return;
         soundEffects.current.playSound(pickupSound);
         GameManager.updateDash();
         gameObject.SetActive(false);
     }
-
 }

@@ -1,30 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class chest : MonoBehaviour
 {
-
+    private BoxCollider boxCollider;
     public bool interactable = false;
     private Animator anim;
 
     // Use this for initialization of script
     void Start()
     {
+        boxCollider = GetComponent<BoxCollider>();
         anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Si el jugador está cerca y presiona la tecla Espacio
         if (interactable && Input.GetKeyDown(KeyCode.Space))
         {
-            // Abrir el cofre
-            anim.SetBool("openChest", true);
-            // Iniciar la corrutina para cerrar el cofre después de 5 segundos
-            StartCoroutine(CloseChestAfterDelay(4f));
+            OpenChest();
         }
     }
 
@@ -44,11 +40,17 @@ public class chest : MonoBehaviour
         }
     }
 
+    private void OpenChest()
+    {
+        anim.SetBool("openChest", true);
+        boxCollider.enabled = false;  // Desactiva el BoxCollider para permitir la entrada
+        StartCoroutine(CloseChestAfterDelay(4f));
+    }
+
     private IEnumerator CloseChestAfterDelay(float delay)
     {
-        // Esperar por el tiempo especificado
         yield return new WaitForSeconds(delay);
-        // Cerrar el cofre
         anim.SetBool("openChest", false);
+        boxCollider.enabled = true;  // Reactiva el BoxCollider después de cerrar
     }
 }
