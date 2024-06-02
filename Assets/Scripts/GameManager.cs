@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     float visibility;
     int hitNumber;
     public GameObject portal;
+    float timeMax = 300f;
+    float actualTime;
+    bool timeActivate = false;
  
     void Awake()
     {
@@ -36,6 +39,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+
+        if (current.timeActivate)
+        {
+            changeCounter();
+        }
+
         if (current.hitNumber >= 4 && current.isPlaying)
         {
             current.isPlaying = false;
@@ -43,6 +52,32 @@ public class GameManager : MonoBehaviour
             updateDamage(false);
             SceneManager.LoadScene("MainMenu");
         }
+    }
+
+    public void changeCounter()
+    {
+        current.actualTime -= Time.deltaTime;
+        UIManager.updateTimeUI(current.actualTime);
+        if (current.actualTime <= 0)
+        {
+            current.timeActivate = false;
+        }
+    }
+
+    public void changeTimer(bool status)
+    {
+        current.timeActivate = status;
+    }
+
+    public void activateTimer()
+    {
+        current.actualTime = current.timeMax;
+        changeTimer(true);
+    }
+
+    public void desactivateTimer()
+    {
+        changeTimer(false);
     }
 
     public static bool setAbilityStatus(bool status)
@@ -192,5 +227,6 @@ public class GameManager : MonoBehaviour
         UIManager.updateInjectorUI(current.injector);
         current.visibility = 0f;
         current.isPlaying = true;
+        activateTimer();
     }
 }

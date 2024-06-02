@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI ghostText;
     public TextMeshProUGUI teleportText;
     public TextMeshProUGUI injectorText;
+    public TextMeshProUGUI timeText;
     public Image bloodEffectImage;
 
     void Awake()
@@ -53,5 +54,13 @@ public class UIManager : MonoBehaviour
     {
         if(current == null) return;
         current.injectorText.text = injectorCount.ToString();
+    }
+
+    public static void updateTimeUI(float time)
+    {
+        if(current == null) return;
+        int minutes = Mathf.FloorToInt(time / 60F);
+        int seconds = Mathf.FloorToInt(time % 60F);
+        current.timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
