@@ -3180,7 +3180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd3dc598e1d2295498bd91282386b407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 350
+  sensitivity: 100
   playerBody: {fileID: 1328505623}
 --- !u!81 &82774497
 AudioListener:
@@ -63955,7 +63955,7 @@ PrefabInstance:
     - target: {fileID: 493507002422335104, guid: a0dc534d9cc9edf48b3a218951cb6edc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 39d51b5a16ce53748abdfa95d0385b7c, type: 2}
+      objectReference: {fileID: 2100000, guid: 9a317c0c3c02e13498630b441346421a, type: 2}
     - target: {fileID: 2454047625213165737, guid: a0dc534d9cc9edf48b3a218951cb6edc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -64007,7 +64007,7 @@ PrefabInstance:
     - target: {fileID: 8786133970279238295, guid: a0dc534d9cc9edf48b3a218951cb6edc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 39d51b5a16ce53748abdfa95d0385b7c, type: 2}
+      objectReference: {fileID: 2100000, guid: 9a317c0c3c02e13498630b441346421a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
