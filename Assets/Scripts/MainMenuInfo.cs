@@ -7,8 +7,10 @@ public class mainMenuInfo : MonoBehaviour
 {
     public void GameScene()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        GameManager.RestartGame();
         SceneManager.LoadScene("Mapa1");
-
     }
 
 }

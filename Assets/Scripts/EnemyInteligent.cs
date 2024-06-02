@@ -14,7 +14,14 @@ public class EnemyInteligent : MonoBehaviour
 
     void Update()
     {
-        IA.speed = Velocity;
+        if (GameManager.getActualTime() >= 0)
+        {
+            IA.speed = Velocity;
+        }
+        else
+        {
+            IA.speed = 9f;
+        }
         IA.SetDestination(target.position);
         updateAnimations();
     }

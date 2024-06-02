@@ -10,6 +10,10 @@ public class Portal : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            GameManager.setGame(false);
+            GameManager.resetHits();
+            GameManager.updateDamage(false);
+            GameManager.changeTimer(false);
             SceneManager.LoadScene(sceneName);
         }
     }

@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
             current.isPlaying = false;
             current.hitNumber = 0;
             updateDamage(false);
+            changeTimer(false);
             SceneManager.LoadScene("MainMenu");
         }
     }
@@ -69,7 +70,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void changeTimer(bool status)
+    public static void changeTimer(bool status)
     {
         current.timeActivate = status;
     }
@@ -77,12 +78,13 @@ public class GameManager : MonoBehaviour
     public void activateTimer()
     {
         current.actualTime = current.timeMax;
+        UIManager.updateTimeUI(current.actualTime);
         changeTimer(true);
     }
 
-    public void desactivateTimer()
+    public static float getActualTime()
     {
-        changeTimer(false);
+        return current.actualTime;
     }
 
     public static bool setAbilityStatus(bool status)
@@ -120,6 +122,11 @@ public class GameManager : MonoBehaviour
         return current.isPlaying;
     }
 
+    public static void setGame(bool game)
+    {
+        current.isPlaying = game;
+    }
+
     public static int getHits()
     {
         return current.hitNumber;
@@ -136,6 +143,13 @@ public class GameManager : MonoBehaviour
         current.hitNumber -= hits;
         updateDamage(false);
         return current.hitNumber;
+    }
+
+    public static void resetHits()
+    {
+        if (current == null) return;
+        current.hitNumber = 0;
+        updateDamage(false);
     }
 
     public static void updateDamage(bool isAttacking)
@@ -234,4 +248,10 @@ public class GameManager : MonoBehaviour
         current.isPlaying = true;
         activateTimer();
     }
+
+    public static void RestartGame()
+    {
+        current.StartGame();
+    }
+
 }
