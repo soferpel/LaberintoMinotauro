@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
     static GameManager current;
     bool isAbilityActivate = false;
     bool isPlaying = false;
@@ -20,10 +19,10 @@ public class GameManager : MonoBehaviour
     float actualTime;
     bool timeActivate = false;
     public GameObject enemy2;
- 
+
     void Awake()
     {
-        if(current != null && current != this)
+        if (current != null && current != this)
         {
             Destroy(gameObject);
             return;
@@ -34,13 +33,15 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        StartGame();
-        current.portal.SetActive(false);
+        if (current == this)
+        {
+            StartGame();
+            current.portal.SetActive(false);
+        }
     }
 
     void Update()
     {
-
         if (current.timeActivate)
         {
             changeCounter();
@@ -64,7 +65,7 @@ public class GameManager : MonoBehaviour
         {
             current.timeActivate = false;
         }
-        else if (current.actualTime <= current.timeMax/2)
+        else if (current.actualTime <= current.timeMax / 2)
         {
             enemy2.SetActive(true);
         }
@@ -72,7 +73,10 @@ public class GameManager : MonoBehaviour
 
     public static void changeTimer(bool status)
     {
-        current.timeActivate = status;
+        if (current != null)
+        {
+            current.timeActivate = status;
+        }
     }
 
     public void activateTimer()
@@ -84,77 +88,88 @@ public class GameManager : MonoBehaviour
 
     public static float getActualTime()
     {
-        return current.actualTime;
+        return current != null ? current.actualTime : 0f;
     }
 
     public static bool setAbilityStatus(bool status)
     {
-        return current.isAbilityActivate = status;
+        return current != null && (current.isAbilityActivate = status);
     }
 
     public static bool getAbilityStatus()
     {
-        return current.isAbilityActivate;
+        return current != null && current.isAbilityActivate;
     }
 
     public static int getGhost()
     {
-        return current.ghost;
+        return current != null ? current.ghost : 0;
     }
 
     public static int getDash()
     {
-        return current.dash;
+        return current != null ? current.dash : 0;
     }
 
     public static int getTeleport()
     {
-        return current.teleport;
+        return current != null ? current.teleport : 0;
     }
 
     public static int getInjector()
     {
-        return current.injector;
+        return current != null ? current.injector : 0;
     }
 
     public static bool getGame()
     {
-        return current.isPlaying;
+        return current != null && current.isPlaying;
     }
 
     public static void setGame(bool game)
     {
-        current.isPlaying = game;
+        if (current != null)
+        {
+            current.isPlaying = game;
+        }
     }
 
     public static int getHits()
     {
-        return current.hitNumber;
+        return current != null ? current.hitNumber : 0;
     }
 
     public static void takeKey()
     {
-        current.portal.SetActive(true);
+        if (current != null)
+        {
+            current.portal.SetActive(true);
+        }
     }
 
     public static int setHits(int hits)
     {
-        if (current == null) return 0;
-        current.hitNumber -= hits;
-        updateDamage(false);
-        return current.hitNumber;
+        if (current != null)
+        {
+            current.hitNumber -= hits;
+            updateDamage(false);
+            return current.hitNumber;
+        }
+        return 0;
     }
 
     public static void resetHits()
     {
-        if (current == null) return;
-        current.hitNumber = 0;
-        updateDamage(false);
+        if (current != null)
+        {
+            current.hitNumber = 0;
+            updateDamage(false);
+        }
     }
 
     public static void updateDamage(bool isAttacking)
     {
-        if(current == null) return;
+        if (current == null) return;
         if (current.hitNumber <= 4 && isAttacking)
         {
             current.hitNumber += 1;
@@ -180,58 +195,74 @@ public class GameManager : MonoBehaviour
 
     public static void updateDash()
     {
-        if(current == null) return;
-        current.dash += 1;
-        UIManager.updateDashUI(current.dash);
+        if (current != null)
+        {
+            current.dash += 1;
+            UIManager.updateDashUI(current.dash);
+        }
     }
 
     public static void reduceDash()
     {
-        if(current == null) return;
-        current.dash -= 1;
-        UIManager.updateDashUI(current.dash);
+        if (current != null)
+        {
+            current.dash -= 1;
+            UIManager.updateDashUI(current.dash);
+        }
     }
 
     public static void updateGhost()
     {
-        if(current == null) return;
-        current.ghost += 1;
-        UIManager.updateGhostUI(current.ghost);
+        if (current != null)
+        {
+            current.ghost += 1;
+            UIManager.updateGhostUI(current.ghost);
+        }
     }
 
     public static void reduceGhost()
     {
-        if(current == null) return;
-        current.ghost -= 1;
-        UIManager.updateGhostUI(current.ghost);
+        if (current != null)
+        {
+            current.ghost -= 1;
+            UIManager.updateGhostUI(current.ghost);
+        }
     }
 
     public static void updateTeleport()
     {
-        if(current == null) return;
-        current.teleport += 1;
-        UIManager.updateTeleporthUI(current.teleport);
+        if (current != null)
+        {
+            current.teleport += 1;
+            UIManager.updateTeleporthUI(current.teleport);
+        }
     }
 
     public static void reduceTeleport()
     {
-        if(current == null) return;
-        current.teleport -= 1;
-        UIManager.updateTeleporthUI(current.teleport);
+        if (current != null)
+        {
+            current.teleport -= 1;
+            UIManager.updateTeleporthUI(current.teleport);
+        }
     }
 
     public static void updateInjector()
     {
-        if(current == null) return;
-        current.injector += 1;
-        UIManager.updateInjectorUI(current.injector);
+        if (current != null)
+        {
+            current.injector += 1;
+            UIManager.updateInjectorUI(current.injector);
+        }
     }
 
     public static void reduceInjector()
     {
-        if(current == null) return;
-        current.injector -= 1;
-        UIManager.updateInjectorUI(current.injector);
+        if (current != null)
+        {
+            current.injector -= 1;
+            UIManager.updateInjectorUI(current.injector);
+        }
     }
 
     void StartGame()
@@ -243,6 +274,7 @@ public class GameManager : MonoBehaviour
         current.teleport = 0;
         UIManager.updateTeleporthUI(current.teleport);
         current.hitNumber = 0;
+        current.injector = 0;
         UIManager.updateInjectorUI(current.injector);
         current.visibility = 0f;
         current.isPlaying = true;
@@ -251,7 +283,9 @@ public class GameManager : MonoBehaviour
 
     public static void RestartGame()
     {
-        current.StartGame();
+        if (current != null)
+        {
+            current.StartGame();
+        }
     }
-
 }
