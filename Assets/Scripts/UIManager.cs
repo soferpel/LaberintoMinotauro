@@ -59,8 +59,19 @@ public class UIManager : MonoBehaviour
     public static void updateTimeUI(float time)
     {
         if(current == null) return;
-        int minutes = Mathf.FloorToInt(time / 60F);
-        int seconds = Mathf.FloorToInt(time % 60F);
-        current.timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        if (time >= 0)
+        {
+            int minutes = Mathf.FloorToInt(time / 60F);
+            int seconds = Mathf.FloorToInt(time % 60F);
+            current.timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            current.timeText.color = Color.white;
+            current.timeText.fontSize = 36;
+        }
+        else
+        {
+            current.timeText.text = "¡CORRE!";
+            current.timeText.color = Color.red;
+            current.timeText.fontSize = 22;
+        }
     }
 }

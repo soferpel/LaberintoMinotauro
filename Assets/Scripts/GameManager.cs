@@ -16,9 +16,10 @@ public class GameManager : MonoBehaviour
     float visibility;
     int hitNumber;
     public GameObject portal;
-    float timeMax = 300f;
+    public float timeMax = 300f;
     float actualTime;
     bool timeActivate = false;
+    public GameObject enemy2;
  
     void Awake()
     {
@@ -61,6 +62,10 @@ public class GameManager : MonoBehaviour
         if (current.actualTime <= 0)
         {
             current.timeActivate = false;
+        }
+        else if (current.actualTime <= current.timeMax/2)
+        {
+            enemy2.SetActive(true);
         }
     }
 
