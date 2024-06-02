@@ -3283,7 +3283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd3dc598e1d2295498bd91282386b407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 100
+  sensitivity: 350
   playerBody: {fileID: 1328505623}
 --- !u!81 &82774497
 AudioListener:
@@ -32534,7 +32534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1052440924
 RectTransform:
   m_ObjectHideFlags: 0

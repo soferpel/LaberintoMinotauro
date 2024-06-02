@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     static GameManager current;
     bool isAbilityActivate = false;
+    bool isPlaying = false;
     int dash;
     int ghost;
     int teleport;
@@ -35,9 +36,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (current.hitNumber >= 4)
+        if (current.hitNumber >= 4 && current.isPlaying)
         {
-            SceneManager.LoadScene("MainMenuDeath");
+            current.isPlaying = false;
+            current.hitNumber = 0;
+            updateDamage(false);
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
@@ -71,6 +75,11 @@ public class GameManager : MonoBehaviour
         return current.injector;
     }
 
+    public static bool getGame()
+    {
+        return current.isPlaying;
+    }
+
     public static int getHits()
     {
         return current.hitNumber;
@@ -86,7 +95,6 @@ public class GameManager : MonoBehaviour
         if (current == null) return 0;
         current.hitNumber -= hits;
         updateDamage(false);
-        Debug.Log(current.hitNumber);
         return current.hitNumber;
     }
 
@@ -183,5 +191,6 @@ public class GameManager : MonoBehaviour
         current.hitNumber = 0;
         UIManager.updateInjectorUI(current.injector);
         current.visibility = 0f;
+        current.isPlaying = true;
     }
 }
