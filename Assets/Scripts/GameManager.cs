@@ -234,6 +234,10 @@ public class GameManager : MonoBehaviour
         UIManager.updateInjectorUI(current.injector);
     }
 
+    public static void RestartGame()
+    {
+        current.StartGame();
+    }
     void StartGame()
     {
         current.dash = 0;
@@ -249,9 +253,6 @@ public class GameManager : MonoBehaviour
         activateTimer();
     }
 
-    public static void RestartGame()
-    {
-        current.StartGame();
-    }
+
 
 }
